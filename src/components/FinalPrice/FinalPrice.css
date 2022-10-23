@@ -1,0 +1,47 @@
+.price-details-container {
+  align-self: flex-start;
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  width: 25rem;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.guests {
+  border: 1px solid var(--container-border-color);
+  padding: 4px 0;
+  text-align: left;
+}
+
+.gutter-sm {
+  padding: 8px 1rem;
+}
+
+.btn-reserve {
+  width: 100%;
+  padding: 1rem;
+}
+
+.price-distribution {
+  padding-top: 1rem;
+}
+
+.final-price {
+  padding: 10px;
+}
+
+.final-price:last-child {
+  border-top: 1px solid var(--container-border-color);
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.guest-count-input {
+  border: none;
+}
+
+.guest-count-input:focus {
+  outline: none;
+}

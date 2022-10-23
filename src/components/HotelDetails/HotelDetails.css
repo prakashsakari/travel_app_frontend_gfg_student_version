@@ -1,0 +1,51 @@
+.gap-small {
+  gap: 8px;
+}
+
+.host-details .p {
+  color: var(--text-color-primary);
+  font-size: 1rem;
+}
+
+.span {
+  color: var(--text-color-primary);
+  font-size: 0.875rem;
+}
+
+.host-details .span {
+  display: block;
+  padding-top: 10px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.fs-large {
+  font-size: 1.25rem;
+}
+
+.apps {
+  font-size: 1rem;
+}
+
+.host-details {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--container-border-color);
+}
+
+.hotel-room-details {
+  padding-top: 8px;
+}
+
+.gutter-bottom-small {
+  padding-bottom: 1.5rem;
+}
+
+.amenities {
+  padding-bottom: 1rem;
+}
+
+.amenities-container .span {
+  padding: 0.5rem 0;
+}
