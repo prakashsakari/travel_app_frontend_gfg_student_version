@@ -6,9 +6,17 @@ import {
   HotelCard,
   Categories,
   SearchStayWithDate,
+  Filter,
 } from "../../components";
 import "./Home.css";
-import { useCategory, useDate } from "../../context";
+import { useCategory, useDate, useFilter } from "../../context";
+import {
+  getHotelsByPrice,
+  getHotelsByRoomsAndBeds,
+  getHotelsByPropertyType,
+  getHotelsByRatings,
+  getHotelsByCancelation,
+} from "../../utils";
 
 export const Home = () => {
   const [hasMore, setHasMore] = useState(true);
@@ -17,6 +25,16 @@ export const Home = () => {
   const [hotels, setHotels] = useState([]);
   const { hotelCategory } = useCategory();
   const { isSearchModalOpen } = useDate();
+  const {
+    isFilterModalOpen,
+    priceRange,
+    noOfBathrooms,
+    noOfBedrooms,
+    noOfBeds,
+    propertyType,
+    traveloRating,
+    isCancelable,
+  } = useFilter();
 
   useEffect(() => {
     (async () => {
@@ -50,6 +68,28 @@ export const Home = () => {
     }, 1000);
   };
 
+  const filteredHotelsByPrice = getHotelsByPrice(hotels, priceRange);
+  const filteredHotelsByBedsAndRooms = getHotelsByRoomsAndBeds(
+    filteredHotelsByPrice,
+    noOfBathrooms,
+    noOfBedrooms,
+    noOfBeds
+  );
+  const filteredHotelsByPropertyType = getHotelsByPropertyType(
+    filteredHotelsByBedsAndRooms,
+    propertyType
+  );
+
+  const filteredHotelsByRatings = getHotelsByRatings(
+    filteredHotelsByPropertyType,
+    traveloRating
+  );
+
+  const filteredHotelsByCancelation = getHotelsByCancelation(
+    filteredHotelsByRatings,
+    isCancelable
+  );
+
   return (
     <div className="relative">
       <Navbar />
@@ -65,8 +105,8 @@ export const Home = () => {
           endMessage={<p className="alert-text">You have seen it all</p>}
         >
           <main className="main d-flex align-center wrap gap-larger">
-            {hotels &&
-              hotels.map((hotel) => (
+            {filteredHotelsByCancelation &&
+              filteredHotelsByCancelation.map((hotel) => (
                 <HotelCard key={hotel._id} hotel={hotel} />
               ))}
           </main>
@@ -75,6 +115,7 @@ export const Home = () => {
         <></>
       )}
       {isSearchModalOpen && <SearchStayWithDate />}
+      {isFilterModalOpen && <Filter />}
     </div>
   );
 };

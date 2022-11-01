@@ -30,5 +30,18 @@
 }
 
 .btn-right {
-  right: 7rem;
+  right: 10rem;
+}
+
+.button.btn-filter {
+  top: 5.5rem;
+  right: 2rem;
+  padding: 8px 1rem;
+  border-radius: 2rem;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-filter:hover,
+.btn-category:hover {
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
 }
