@@ -1,0 +1,88 @@
+.filter-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--overlay);
+  padding-bottom: 5rem;
+}
+
+.filter-page {
+  background-color: var(--background-color);
+  padding: 2rem 3rem;
+  margin: 3rem 0;
+  width: max-content;
+  height: 100%;
+  transform: translate(70%, 0);
+  overflow: auto;
+}
+
+.filter-container {
+  padding: 1rem 0;
+}
+
+.filter-label {
+  display: inline-block;
+  font-size: 1.875rem;
+  opacity: 0.5;
+  padding: 8px 0;
+}
+
+.span-label {
+  font-size: 1.25rem;
+}
+
+.aminity-count {
+  display: inline-flex;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 4px;
+  color: var(--accent-color);
+  width: 2.875rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.on-hover:hover,
+.selected {
+  color: var(--background-color);
+  background-color: var(--text-color-primary);
+}
+
+.property-type {
+  display: inline-flex;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 4px;
+  color: var(--accent-color);
+  padding: 1rem;
+  width: 7rem;
+  height: 6rem;
+}
+
+.star {
+  height: 3rem;
+  width: 5rem;
+}
+
+.button.btn-link-primary {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--text-color-primary);
+  border-radius: 0;
+  padding: 0;
+}
+
+.button.btn-apply {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 8px 1.5rem;
+}
+
+.btn-close {
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-close:hover {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
