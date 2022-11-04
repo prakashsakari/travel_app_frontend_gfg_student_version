@@ -1,0 +1,41 @@
+.auth-modal-container {
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+}
+
+.auth-modal {
+  width: 400px;
+  background-color: var(--background-color);
+  top: 1rem;
+  opacity: 1;
+}
+
+.button.btn-auth {
+  border-radius: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 1rem 1rem;
+  color: var(--text-color-primary);
+}
+
+.button.btn-auth-selected {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.button.btn-close {
+  height: 2rem;
+  width: 2rem;
+}
+
+.button.btn-close:hover {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
