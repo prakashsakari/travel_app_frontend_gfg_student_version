@@ -7,9 +7,10 @@ import {
   Categories,
   SearchStayWithDate,
   Filter,
+  AuthModal,
 } from "../../components";
 import "./Home.css";
-import { useCategory, useDate, useFilter } from "../../context";
+import { useCategory, useDate, useFilter, useAuth } from "../../context";
 import {
   getHotelsByPrice,
   getHotelsByRoomsAndBeds,
@@ -35,6 +36,8 @@ export const Home = () => {
     traveloRating,
     isCancelable,
   } = useFilter();
+
+  const { isAuthModalOpen } = useAuth();
 
   useEffect(() => {
     (async () => {
@@ -116,6 +119,7 @@ export const Home = () => {
       )}
       {isSearchModalOpen && <SearchStayWithDate />}
       {isFilterModalOpen && <Filter />}
+      {isAuthModalOpen && <AuthModal />}
     </div>
   );
 };
