@@ -11,6 +11,7 @@ export const loginHandler = async (number, password) => {
         password: password,
       }
     );
+    console.log("Logged IN");
     console.log({ accessToken, username });
     return { accessToken, username };
   } catch (err) {
