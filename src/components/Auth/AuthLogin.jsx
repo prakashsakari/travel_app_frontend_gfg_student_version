@@ -56,7 +56,10 @@ export const AuthLogin = () => {
   };
 
   const handleTestCredentialsClick = async () => {
-    const { accessToken, username } = loginHandler("7878787878", "Abcd@1234");
+    const { accessToken, username } = await loginHandler(
+      "7878787878",
+      "Abcd@1234"
+    );
     authDispatch({
       type: "SET_ACCESS_TOKEN",
       payload: accessToken,
