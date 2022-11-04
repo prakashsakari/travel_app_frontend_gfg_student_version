@@ -11,6 +11,7 @@ export const signupHandler = async (username, number, email, password) => {
         password: password,
       }
     );
+    console.log("Signed Up");
     console.log(data);
   } catch (err) {
     console.log("error adding user to database");
