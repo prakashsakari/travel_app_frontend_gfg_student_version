@@ -1,4 +1,7 @@
-export const authReducer = (state, { type, payload }) => {
+export const authReducer = (state, {
+  type,
+  payload
+}) => {
   switch (type) {
     case "SHOW_AUTH_MODAL":
       return {
@@ -44,10 +47,10 @@ export const authReducer = (state, { type, payload }) => {
       return {
         ...state,
         username: "",
-        number: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
+          number: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
       };
     case "SET_ACCESS_TOKEN":
       return {
@@ -59,7 +62,18 @@ export const authReducer = (state, { type, payload }) => {
         ...state,
         name: payload,
       };
-    default:
-      return state;
+    case "SHOW_DROP_DOWN_OPTIONS":
+      return {
+        ...state,
+        isDropDownModalOpen: !state.isDropDownModalOpen
+      }
+    case "CLEAR_CREDENTIALS":
+      return {
+        ...state,
+        accessToken: "",
+        name: ""
+      }
+      default:
+        return state;
   }
 };
