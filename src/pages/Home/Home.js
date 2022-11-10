@@ -8,6 +8,7 @@ import {
   SearchStayWithDate,
   Filter,
   AuthModal,
+  ProfileDropDown
 } from "../../components";
 import "./Home.css";
 import { useCategory, useDate, useFilter, useAuth } from "../../context";
@@ -37,7 +38,7 @@ export const Home = () => {
     isCancelable,
   } = useFilter();
 
-  const { isAuthModalOpen } = useAuth();
+  const { isAuthModalOpen, isDropDownModalOpen } = useAuth();
 
   useEffect(() => {
     (async () => {
@@ -117,6 +118,7 @@ export const Home = () => {
       ) : (
         <></>
       )}
+      { isDropDownModalOpen && <ProfileDropDown />}
       {isSearchModalOpen && <SearchStayWithDate />}
       {isFilterModalOpen && <Filter />}
       {isAuthModalOpen && <AuthModal />}

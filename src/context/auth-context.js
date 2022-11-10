@@ -3,6 +3,7 @@ import { authReducer } from "../reducer";
 
 const initialValue = {
   isAuthModalOpen: false,
+  isDropDownModalOpen: false,
   username: "",
   number: "",
   email: "",
@@ -19,6 +20,7 @@ const AuthProvider = ({ children }) => {
   const [
     {
       isAuthModalOpen,
+      isDropDownModalOpen,
       username,
       email,
       password,
@@ -35,6 +37,7 @@ const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         isAuthModalOpen,
+        isDropDownModalOpen,
         username,
         email,
         password,
