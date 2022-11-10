@@ -1,5 +1,5 @@
 import "./ProfileDropDown.css";
-import { useAuth, useDate } from "../../context";
+import { useAuth, useDate, useFilter } from "../../context";
 import { useNavigate } from "react-router-dom";
 
 export const ProfileDropDown = () => {
@@ -7,6 +7,8 @@ export const ProfileDropDown = () => {
     const { authDispatch } = useAuth();
 
     const { dateDispatch } = useDate();
+
+    const { filterDispatch } = useFilter();
 
     const navigate = useNavigate();
 
@@ -29,6 +31,9 @@ export const ProfileDropDown = () => {
         })
         dateDispatch({
             type: "CLEAR_INPUTS"
+        })
+        filterDispatch({
+            type: "CLEAR_ALL"
         })
     }
 
