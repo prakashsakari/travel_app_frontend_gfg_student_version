@@ -10,7 +10,6 @@ export const HotelCard = ({ hotel }) => {
 
   const { accessToken, authDispatch } = useAuth();
 
-  console.log({ accessToken });
 
   const isHotelInWishlist = findHotelInWishlist(wishlist, _id);
 
@@ -27,7 +26,6 @@ export const HotelCard = ({ hotel }) => {
           type: "ADD_TO_WISHLIST",
           payload: hotel,
         });
-        navigate("/wishlist");
       } else {
         wishlistDispatch({
           type: "REMOVE_FROM_WISHLIST",
