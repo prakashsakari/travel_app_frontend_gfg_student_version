@@ -1,0 +1,71 @@
+.payment-page {
+  padding: 9rem 0 2rem 0;
+  gap: 6rem;
+}
+
+.gap-md {
+  gap: 1.5rem;
+}
+
+.final-details-container {
+  padding: 1rem;
+  width: 25rem;
+}
+
+.dates-and-guests {
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.payment-option {
+  border: 1px solid var(--accent-color);
+  padding: 10px;
+  width: 100%;
+  color: #1d4ed8;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.btn-pay {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.final-details {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+
+.image {
+  width: 12.5rem;
+  border-radius: 4px;
+}
+
+.rating-container {
+  margin-bottom: auto;
+}
+
+.tag {
+  border-top: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding: 1rem 0;
+}
+
+.tag .strong {
+  color: var(--primary-color);
+}
+
+.price-detail-container .price-distribution {
+  padding: 0;
+}
+
+.price-detail-container .final-price {
+  padding: 10px 0;
+}
+
+.price-detail-container .final-price .span {
+  font-size: 1rem;
+}
