@@ -1,0 +1,38 @@
+.os-container {
+    width: 45rem;
+    padding: 3rem 2rem 3rem 2rem;
+    color: var(--text-color-primary);
+}
+
+.close{
+    color: var(--text-color-primary);
+}
+
+.close:hover {
+    background-color: var(--accent-color);
+}
+
+.br-bottom {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.pd-small {
+    padding-bottom: 1rem;
+}
+
+.os-container .img {
+    width: 12rem;
+    height: 6rem;
+}
+
+.hoteldetails {
+    align-self: flex-start;
+}
+
+.fs-md {
+    font-size: 1.5rem;
+}
+
+.span-md {
+    font-size: 1.25rem;
+}

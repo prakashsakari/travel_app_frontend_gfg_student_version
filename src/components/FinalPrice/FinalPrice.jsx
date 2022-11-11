@@ -1,5 +1,5 @@
 import "./FinalPrice.css";
-import { useDate } from "../../context";
+import { useDate, useAuth } from "../../context";
 import { DateSelector } from "../DateSelector/DateSelector";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,8 @@ export const FinalPrice = ({ singleHotel }) => {
 
   const { guests, dateDispatch, checkInDate, checkOutDate } = useDate();
 
+  const { accessToken } = useAuth();
+
   const handleGuestChange = (event) => {
     dateDispatch({
       type: "GUESTS",
@@ -18,7 +20,11 @@ export const FinalPrice = ({ singleHotel }) => {
   };
 
   const handleReserveClick = () => {
-    navigate(`/confirm-booking/stay/${_id}`);
+    if (accessToken) {
+      navigate(`/confirm-booking/stay/${_id}`);
+    }else{
+      console.log("Kindly Login")
+    }
   };
 
   return (
