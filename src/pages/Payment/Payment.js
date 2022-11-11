@@ -64,7 +64,7 @@ export const Payment = () => {
       description: "Thank you for booking with us",
 
       handler: ({ payment_id }) => {
-        navigate("/order-summary");
+        console.log("Payment Completed")
       },
       prefill: {
         name: "Prakash Sakari",
