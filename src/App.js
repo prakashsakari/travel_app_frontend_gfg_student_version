@@ -7,7 +7,6 @@ import {
   Payment,
   OrderSummary,
 } from "./pages";
-import { Filter } from "./components";
 import "./App.css";
 
 function App() {

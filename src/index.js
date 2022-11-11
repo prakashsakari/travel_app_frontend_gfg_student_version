@@ -8,6 +8,7 @@ import {
   FilterProvider,
   AuthProvider,
   WishlistProvider,
+  HotelProvider
 } from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,7 +20,9 @@ root.render(
           <FilterProvider>
             <AuthProvider>
               <WishlistProvider>
-                <App />
+                <HotelProvider>
+                  <App />
+                </HotelProvider>
               </WishlistProvider>
             </AuthProvider>
           </FilterProvider>
