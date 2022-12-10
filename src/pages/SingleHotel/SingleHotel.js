@@ -22,9 +22,8 @@ export const SingleHotel = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://breezetraveloapp.herokuapp.com/api/hotels/${id}`
+          `https://travelapp.cyclic.app/api/hotels/${id}`
         );
-        console.log(`https://breezetraveloapp.herokuapp.com/api/hotels/${id}`);
         setSingleHotel(data);
       } catch (err) {
         console.log(err);
