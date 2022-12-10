@@ -10,7 +10,7 @@ export const Payment = () => {
 
   const navigate = useNavigate();
 
-  const { guests, dateDispatch, checkInDate, checkOutDate } = useDate();
+  const { guests, checkInDate, checkOutDate } = useDate();
   const numberOfNights =
     checkInDate && checkOutDate
       ? (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)
@@ -22,9 +22,8 @@ export const Payment = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://breezetraveloapp.herokuapp.com/api/hotels/${id}`
+          `https://travelapp.cyclic.app/api/hotels/${id}`
         );
-        console.log(`https://breezetraveloapp.herokuapp.com/api/hotels/${id}`);
         setSingleHotel(data);
       } catch (err) {
         console.log(err);
