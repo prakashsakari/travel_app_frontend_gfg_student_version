@@ -1,0 +1,21 @@
+.drop-down-container {
+    background-color: var(--background-color);
+    top: 4.5rem;
+    right: 2rem;
+    z-index: 9;
+    border-radius: 4px;
+    padding-bottom: 2rem;
+}
+
+.option-span.wishlist-span {
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.option-span {
+    padding: 1rem 11rem 1rem .875rem;
+}
+
+.option-span:hover {
+    background-color: rgba(0, 0, 0, .1);
+}

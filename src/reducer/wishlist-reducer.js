@@ -10,5 +10,10 @@ export const wishlistReducer = (state, { type, payload }) => {
         ...state,
         wishlist: state.wishlist.filter((hotel) => hotel._id !== payload),
       };
+    case "CLEAR_WISHLIST":
+      return {
+        ...state,
+        wishlist: []
+      }
   }
 };

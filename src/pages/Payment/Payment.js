@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useDate } from "../../context";
+import { useDate, useHotel } from "../../context";
+import { v4 as uuid } from "uuid";
 import axios from "axios";
 import "./Payment.css";
 
@@ -11,6 +12,9 @@ export const Payment = () => {
   const navigate = useNavigate();
 
   const { guests, checkInDate, checkOutDate } = useDate();
+
+  const { hotel, setHotel } = useHotel();
+
   const numberOfNights =
     checkInDate && checkOutDate
       ? (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)
@@ -63,7 +67,12 @@ export const Payment = () => {
       description: "Thank you for booking with us",
 
       handler: ({ payment_id }) => {
-        console.log("Payment Completed")
+        setHotel({...singleHotel, orderId: uuid(),
+        payment_id, 
+        checkInDate: checkInDate.toLocaleDateString("en-US", { day: "numeric", month: "short" }),
+        checkOutDate: checkOutDate.toLocaleDateString("en-US", { day: "numeric", month: "short" }),
+        totalPayableAmount});
+        navigate("/order-summary");
       },
       prefill: {
         name: "Prakash Sakari",

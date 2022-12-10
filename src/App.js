@@ -6,7 +6,6 @@ import {
   Wishlist,
   Payment,
 } from "./pages";
-import { Filter } from "./components";
 import "./App.css";
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
         element={<SingleHotel />}
       />
       <Route path="/hotels/:address" element={<SearchResults />} />
-      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/wishlists" element={<Wishlist />} />
       <Route path="/confirm-booking/stay/:id" element={<Payment />} />
     </Routes>
   );

@@ -10,3 +10,5 @@ export { Filter } from "./Filters/Filter";
 export { AuthLogin } from "./Auth/AuthLogin";
 export { AuthSignup } from "./Auth/AuthSignup";
 export { AuthModal } from "./AuthModal/AuthModal";
+export { ProfileDropDown } from "./ProfileDropDown/ProfileDropDown";
+export { OrderSummaryComp} from  "./OrderSummaryComp/OrderSummaryComp";
