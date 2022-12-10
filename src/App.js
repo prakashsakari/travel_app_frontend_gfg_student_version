@@ -5,6 +5,7 @@ import {
   SearchResults,
   Wishlist,
   Payment,
+  OrderSummary
 } from "./pages";
 import "./App.css";
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/hotels/:address" element={<SearchResults />} />
       <Route path="/wishlists" element={<Wishlist />} />
       <Route path="/confirm-booking/stay/:id" element={<Payment />} />
+      <Route path="/order-summary" element={<OrderSummary />} />
     </Routes>
   );
 }
