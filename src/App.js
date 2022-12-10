@@ -18,7 +18,7 @@ function App() {
         element={<SingleHotel />}
       />
       <Route path="/hotels/:address" element={<SearchResults />} />
-      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/wishlists" element={<Wishlist />} />
       <Route path="/confirm-booking/stay/:id" element={<Payment />} />
       <Route path="/order-summary" element={<OrderSummary />} />
     </Routes>

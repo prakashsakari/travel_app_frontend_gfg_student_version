@@ -18,7 +18,7 @@ export const ProfileDropDown = () => {
         authDispatch({
             type: "SHOW_DROP_DOWN_OPTIONS"
         })
-        navigate("/wishlist");
+        navigate("/wishlists");
     }
 
     const handleLogoutClick = () => {
@@ -40,6 +40,7 @@ export const ProfileDropDown = () => {
         wishlistDispatch({
             type: "CLEAR_WISHLIST"
         })
+        navigate("/")
     }
 
     return (
