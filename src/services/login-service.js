@@ -5,7 +5,7 @@ export const loginHandler = async (number, password) => {
     const {
       data: { accessToken: accessToken, username },
     } = await axios.post(
-      "https://breezetraveloapp.herokuapp.com/api/auth/login",
+      "https://travelapp.cyclic.app/api/auth/login",
       {
         number: number,
         password: password,
@@ -13,6 +13,8 @@ export const loginHandler = async (number, password) => {
     );
     console.log("Logged IN");
     console.log({ accessToken, username });
+    localStorage.setItem("token", accessToken);
+    localStorage.setItem("username", username);
     return { accessToken, username };
   } catch (err) {
     console.log("unable to login");

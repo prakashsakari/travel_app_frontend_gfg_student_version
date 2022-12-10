@@ -12,7 +12,7 @@ function App() {
         element={<SingleHotel />}
       />
       <Route path="/hotels/:address" element={<SearchResults />} />
-      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/wishlists" element={<Wishlist />} />
     </Routes>
   );
 }
