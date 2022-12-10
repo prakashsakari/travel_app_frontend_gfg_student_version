@@ -44,7 +44,7 @@ export const Home = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://breezetraveloapp.herokuapp.com/api/hotels?category=${hotelCategory}`
+          `https://breezetraveloapp.cyclic.app/api/hotels?category=${hotelCategory}`
         );
 
         setTestData(data);

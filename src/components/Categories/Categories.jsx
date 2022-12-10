@@ -29,7 +29,7 @@ export const Categories = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          "https://breezetraveloapp.herokuapp.com/api/category"
+          "https://breezetraveloapp.cyclic.app/api/category"
         );
         const categoriesToShow = data.slice(
           numberOfCategoryToShow + 10 > data.length
