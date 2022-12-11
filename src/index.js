@@ -8,7 +8,8 @@ import {
   FilterProvider,
   AuthProvider,
   WishlistProvider,
-  HotelProvider
+  HotelProvider,
+  AlertProvider
 } from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,7 +22,9 @@ root.render(
             <AuthProvider>
               <WishlistProvider>
                 <HotelProvider>
-                  <App />
+                  <AlertProvider>
+                    <App />
+                  </AlertProvider>
                 </HotelProvider>
               </WishlistProvider>
             </AuthProvider>

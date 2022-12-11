@@ -1,5 +1,5 @@
 import "./ProfileDropDown.css";
-import { useAuth, useDate, useFilter, useWishlist } from "../../context";
+import { useAuth, useDate, useFilter, useWishlist, useAlert } from "../../context";
 import { useNavigate } from "react-router-dom";
 
 export const ProfileDropDown = () => {
@@ -11,6 +11,8 @@ export const ProfileDropDown = () => {
     const { filterDispatch } = useFilter();
 
     const { wishlistDispatch } = useWishlist();
+
+    const { setAlert } = useAlert();
 
     const navigate = useNavigate();
 
@@ -41,6 +43,11 @@ export const ProfileDropDown = () => {
             type: "CLEAR_WISHLIST"
         })
         navigate("/")
+        setAlert({
+            open: true,
+            message: "Logged out successfully",
+            type: "success"
+        })
     }
 
     return (

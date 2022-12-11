@@ -8,10 +8,11 @@ import {
   SearchStayWithDate,
   Filter,
   AuthModal,
-  ProfileDropDown
+  ProfileDropDown,
+  Alert
 } from "../../components";
 import "./Home.css";
-import { useCategory, useDate, useFilter, useAuth } from "../../context";
+import { useCategory, useDate, useFilter, useAuth, useAlert } from "../../context";
 import {
   getHotelsByPrice,
   getHotelsByRoomsAndBeds,
@@ -39,6 +40,7 @@ export const Home = () => {
   } = useFilter();
 
   const { isAuthModalOpen, isDropDownModalOpen } = useAuth();
+  const { alert } = useAlert();
 
   useEffect(() => {
     (async () => {
@@ -122,6 +124,7 @@ export const Home = () => {
       {isSearchModalOpen && <SearchStayWithDate />}
       {isFilterModalOpen && <Filter />}
       {isAuthModalOpen && <AuthModal />}
+      { alert.open && <Alert />}
     </div>
   );
 };
