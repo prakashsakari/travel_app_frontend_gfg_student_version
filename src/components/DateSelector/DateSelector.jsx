@@ -28,6 +28,7 @@ export const DateSelector = ({ placeholder, checkInType }) => {
       onFocus={handleDateFocus}
       dateFormat="dd/MM/yyyy"
       placeholderText="Add Dates"
+      minDate={new Date()}
       closeOnScroll={true}
     />
   );
