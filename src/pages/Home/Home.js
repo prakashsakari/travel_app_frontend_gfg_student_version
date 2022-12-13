@@ -120,11 +120,11 @@ export const Home = () => {
       ) : (
         <></>
       )}
-      { isDropDownModalOpen && <ProfileDropDown />}
+      {isDropDownModalOpen && <ProfileDropDown />}
       {isSearchModalOpen && <SearchStayWithDate />}
       {isFilterModalOpen && <Filter />}
       {isAuthModalOpen && <AuthModal />}
-      { alert.open && <Alert />}
+      {alert.open && <Alert />}
     </div>
   );
 };

@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAuth } from "../../context";
+import { useAuth, useDate } from "../../context";
 import {
   FinalPrice,
   HotelDetails,
   HotelImages,
   Navbar,
   AuthModal,
-  ProfileDropDown
+  ProfileDropDown,
+  SearchStayWithDate
 } from "../../components";
 import "./SingleHotel.css";
 
@@ -17,6 +18,7 @@ export const SingleHotel = () => {
   const [singleHotel, setSingleHotel] = useState({});
 
   const { isAuthModalOpen, isDropDownModalOpen } = useAuth();
+  const { isSearchModalOpen } = useDate();
 
   useEffect(() => {
     (async () => {
@@ -46,7 +48,8 @@ export const SingleHotel = () => {
           <FinalPrice singleHotel={singleHotel} />
         </div>
       </main>
-      { isDropDownModalOpen && <ProfileDropDown />}
+      {isSearchModalOpen && <SearchStayWithDate />}
+      {isDropDownModalOpen && <ProfileDropDown />}
       {isAuthModalOpen && <AuthModal />}
     </div>
   );
