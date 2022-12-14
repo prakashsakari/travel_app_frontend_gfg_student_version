@@ -98,7 +98,7 @@ export const Home = () => {
 
   return (
     <div className="relative">
-      <Navbar />
+      <Navbar route="home"/>
       <Categories />
       {hotels && hotels.length > 0 ? (
         <InfiniteScroll
