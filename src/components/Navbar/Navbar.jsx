@@ -39,10 +39,10 @@ export const Navbar = ({route}) => {
         className="form-container d-flex align-center cursor-pointer shadow"
         onClick={handleSearchClick}
       >
-        <span className="form-option">{destination || "Any Where"}</span>
+        <span className="form-option">{route === "home" ? "Any Where" : (destination || "Any Where")}</span>
         <span className="border-right-1px"></span>
         <span className="form-option">
-          {checkInDate && checkOutDate
+          {checkInDate && checkOutDate && route !== "home"
             ? `${checkInDate.toLocaleDateString("en-US", {
               day: "numeric",
               month: "short",
@@ -54,7 +54,7 @@ export const Navbar = ({route}) => {
         </span>
         <span className="border-right-1px"></span>
         <span className="form-option">
-          {guests > 0 ? `${guests} guests` : "Add Guests"}
+          {route !== "home" && guests > 0 ? `${guests} guests` : "Add Guests"}
         </span>
         <span class="search material-icons-outlined">search</span>
       </div>
