@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {
@@ -27,7 +27,7 @@ export const Home = () => {
   const [testData, setTestData] = useState([]);
   const [hotels, setHotels] = useState([]);
   const { hotelCategory } = useCategory();
-  const { isSearchModalOpen } = useDate();
+  const { isSearchModalOpen, dateDispatch } = useDate();
   const {
     isFilterModalOpen,
     priceRange,
@@ -56,6 +56,7 @@ export const Home = () => {
       }
     })();
   }, [hotelCategory]);
+
 
   const fetchMoreData = () => {
     if (hotels.length >= testData.length) {

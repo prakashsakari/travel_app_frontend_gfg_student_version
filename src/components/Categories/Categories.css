@@ -4,7 +4,7 @@
   background-color: var(--background-color);
   position: fixed;
   z-index: 1;
-  width: 100vw;
+  width: 90vw;
 }
 
 .gap-large {
@@ -44,4 +44,16 @@
 .btn-filter:hover,
 .btn-category:hover {
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.rec.rec-arrow {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  line-height: 25px;
+  font-size: 1rem;
 }
