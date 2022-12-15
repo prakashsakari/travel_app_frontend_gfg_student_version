@@ -4,7 +4,7 @@
   background-color: var(--background-color);
   position: fixed;
   z-index: 1;
-  width: 90vw;
+  width: 100vw;
 }
 
 .gap-large {
@@ -15,27 +15,7 @@
   border-bottom: 1px solid var(--text-color-primary);
 }
 
-.button.btn-category {
-  padding: 0;
-  top: 6rem;
-  border: 1px solid var(--accent-color);
-  border-radius: 50%;
-  color: var(--text-color-primary);
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.btn-left {
-  left: 2rem;
-}
-
-.btn-right {
-  right: 10rem;
-}
-
 .button.btn-filter {
-  top: 5.5rem;
-  right: 2rem;
   padding: 8px 1rem;
   border-radius: 2rem;
   border: 1px solid var(--accent-color);
