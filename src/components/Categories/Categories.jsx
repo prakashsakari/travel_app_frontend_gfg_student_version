@@ -35,19 +35,21 @@ export const Categories = () => {
   };
 
   return (
-    <section className="categories">
+    <section className="categories d-flex gap align-center">
       <Carousel itemsToShow={9} itemsToScroll={9} pagination={false}>
         {
-          categories && categories.map(({_id, category}) => <Item className={`${category === hotelCategory ? "border-bottom" : ""}`} onClick={() => handleCategoryClick(category)} key={_id}>{category}</Item>)
+          categories && categories.map(({ _id, category }) => <Item className={`${category === hotelCategory ? "border-bottom" : ""}`} onClick={() => handleCategoryClick(category)} key={_id}>{category}</Item>)
         }
       </Carousel>
       <button
-        className="button btn-filter d-flex align-center gap-small cursor-pointer fixed"
+        className="button btn-filter d-flex align-center gap-small cursor-pointer"
         onClick={handleFilterClick}
       >
         <span className="material-icons-outlined">filter_alt</span>
         <span>Filter</span>
       </button>
     </section>
+
+
   );
 };
