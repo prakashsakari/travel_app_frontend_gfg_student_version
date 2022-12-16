@@ -77,12 +77,12 @@
   padding: 8px 1.5rem;
 }
 
-.btn-close {
+.btn-filter-close {
   width: 3rem;
   height: 3rem;
 }
 
-.btn-close:hover {
+.btn-filter-close:hover {
   background-color: var(--accent-color);
   border-radius: 50%;
 }
