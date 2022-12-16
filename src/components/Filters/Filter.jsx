@@ -30,7 +30,7 @@ export const Filter = () => {
         <div className="d-flex align-center justify-space-between">
           <span className="filter-label">Filter</span>
           <button
-            className="button btn-close cursor-pointer d-flex align-center justify-center"
+            className="button btn-filter-close cursor-pointer d-flex align-center justify-center"
             onClick={handleFilterModalCloseClick}
           >
             <span className="material-icons-outlined">close</span>
