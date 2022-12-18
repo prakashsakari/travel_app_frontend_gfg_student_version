@@ -13,7 +13,7 @@ export const Payment = () => {
 
   const { guests, checkInDate, checkOutDate } = useDate();
 
-  const { hotel, setHotel } = useHotel();
+  const { setHotel } = useHotel();
 
   const numberOfNights =
     checkInDate && checkOutDate
@@ -33,7 +33,7 @@ export const Payment = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   const { image, name, address, state, rating, price } = singleHotel;
 

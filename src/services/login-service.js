@@ -3,7 +3,7 @@ import axios from "axios";
 export const loginHandler = async (number, password, setAlert) => {
   try {
     const {
-      data: { accessToken: accessToken, username },
+      data: { accessToken, username },
     } = await axios.post(
       "https://travelapp.cyclic.app/api/auth/login",
       {

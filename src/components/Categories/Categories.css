@@ -11,6 +11,26 @@
   gap: 2rem;
 }
 
+.rec.rec-swipable{
+  gap: 1.5rem;
+}
+
+.rec.rec-item-wrapper {
+  width: max-content !important;
+}
+
+.category-color {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.item {
+  cursor: pointer;
+  font-size: .875rem;
+  padding: 8px 10px;
+  border-radius: 2rem;
+}
+
 .border-bottom {
   border-bottom: 1px solid var(--text-color-primary);
 }
@@ -19,6 +39,7 @@
   padding: 8px 1rem;
   border-radius: 2rem;
   border: 1px solid var(--accent-color);
+  align-self: flex-start;
 }
 
 .btn-filter:hover,
@@ -31,9 +52,9 @@
 }
 
 .rec.rec-arrow {
-  width: 25px;
-  height: 25px;
-  min-width: 25px;
-  line-height: 25px;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  line-height: 1.5rem;
   font-size: 1rem;
 }

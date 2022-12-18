@@ -33,7 +33,7 @@ export const SingleHotel = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [id]);
 
   const { name, state } = singleHotel;
 

@@ -27,7 +27,7 @@ export const Home = () => {
   const [testData, setTestData] = useState([]);
   const [hotels, setHotels] = useState([]);
   const { hotelCategory } = useCategory();
-  const { isSearchModalOpen, dateDispatch } = useDate();
+  const { isSearchModalOpen } = useDate();
   const {
     isFilterModalOpen,
     priceRange,
