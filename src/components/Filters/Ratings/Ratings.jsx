@@ -3,7 +3,7 @@ import { useFilter } from "../../../context";
 const ratings = ["1", "2", "3", "4", "5"];
 
 export const Ratings = () => {
-  const { traveloRating, filterDispatch } = useFilter();
+  const { filterDispatch } = useFilter();
 
   const handleRatingsClick = (rating) => {
     filterDispatch({

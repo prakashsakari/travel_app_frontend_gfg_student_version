@@ -15,5 +15,7 @@ export const wishlistReducer = (state, { type, payload }) => {
         ...state,
         wishlist: []
       }
+    default:
+      return state
   }
 };
